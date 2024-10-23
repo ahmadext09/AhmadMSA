@@ -8,7 +8,6 @@ import com.amd.amdmsa.utility.AppUtility
 import javax.inject.Inject
 
 
-
 class HomeViewModelProviderFactory @Inject constructor(
     private val application: Application,
     private val homeRepository: HomeRepository,

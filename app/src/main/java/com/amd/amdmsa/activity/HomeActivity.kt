@@ -229,7 +229,7 @@ class HomeActivity : BaseActivity(), PlaceAdapter.PlaceItemListener {
             } else {
                 binding.clOptions.visibility = View.VISIBLE
             }
-            Toast.makeText(this, "Places offering both pizza and juice: ${pizzaJuicePlaces.size}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Places offering both pizza and juice:  ${pizzaJuicePlaces.size}", Toast.LENGTH_SHORT).show()
         }
     }
 
