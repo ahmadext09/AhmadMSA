@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AmdMSA</string>
+
+    <string name="internet_connection" translatable="false">Please check your internet connection &amp; try again</string>
+    <string name="network_failure" translatable="false">Network Failure</string>
+    <string name="something_went_wrong">Opps! Something went wrong. Please try again.</string>
+
+    <string name="place_name">Place Name: %s</string>
+    <string name="place_address">Place Address: %s</string>
+    <string name="place_distance">Place Distance: %s meters</string>
+
+    <string name="empty_list">Regret! No match found for the business or place using fourSquare Api where juice and pizza are available together.</string>
+    <string name="juice_button_text">Display Search Results for Juice</string>
+    <string name="pizza_button_text">Display Search Results for Pizza</string>
+
+</resources>
