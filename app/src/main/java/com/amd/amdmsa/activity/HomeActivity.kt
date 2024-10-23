@@ -11,6 +11,7 @@ import androidx.core.app.ActivityCompat
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.amd.amdmsa.R
 import com.amd.amdmsa.adapter.PlaceAdapter
 import com.amd.amdmsa.databinding.ActivityHomeBinding
 import com.amd.amdmsa.model.FsqNearbyQueryParam
@@ -113,12 +114,11 @@ class HomeActivity : BaseActivity(), PlaceAdapter.PlaceItemListener {
                             makeParallelApiCalls(pizzaQuery, juiceQuery)
                         }
                     }
-                    Toast.makeText(this, "Latitude: $latitude, Longitude: $longitude", Toast.LENGTH_LONG).show()
                 } else {
-                    Toast.makeText(this, "Location not available", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.location_not_available), Toast.LENGTH_SHORT).show()
                 }
             }.addOnFailureListener {
-                Toast.makeText(this, "Failed to get location", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.failed_to_get_location), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -134,7 +134,7 @@ class HomeActivity : BaseActivity(), PlaceAdapter.PlaceItemListener {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getLocation()
             } else {
-                Toast.makeText(this, "Location permission denied", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.location_permission_denied), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -229,7 +229,7 @@ class HomeActivity : BaseActivity(), PlaceAdapter.PlaceItemListener {
             } else {
                 binding.clOptions.visibility = View.VISIBLE
             }
-            Toast.makeText(this, "Places offering both pizza and juice:  ${pizzaJuicePlaces.size}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.places_offer_both, pizzaJuicePlaces.size), Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -238,7 +238,7 @@ class HomeActivity : BaseActivity(), PlaceAdapter.PlaceItemListener {
             if (pizzaPlaces.isNotEmpty())
                 adapter.updateData(pizzaPlaces)
             else
-                Toast.makeText(this, "No search result for pizza", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.no_result_pizza), Toast.LENGTH_SHORT).show()
 
         }
     }
@@ -248,7 +248,7 @@ class HomeActivity : BaseActivity(), PlaceAdapter.PlaceItemListener {
             if (juicePlaces.isNotEmpty())
                 adapter.updateData(juicePlaces)
             else
-                Toast.makeText(this, "No search result for juice", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.no_result_juice), Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -12,5 +12,11 @@
     <string name="empty_list">Regret! No match found for the business or place using fourSquare Api where juice and pizza are available together.</string>
     <string name="juice_button_text">Display Search Results for Juice</string>
     <string name="pizza_button_text">Display Search Results for Pizza</string>
+    <string name="places_offer_both">Places offering both pizza and juice: %d</string>
+    <string name="no_result_pizza">No search result for pizza</string>
+    <string name="no_result_juice">No search result for juice</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="location_not_available">Location not available</string>
+    <string name="failed_to_get_location">Failed to get location</string>
 
 </resources>
